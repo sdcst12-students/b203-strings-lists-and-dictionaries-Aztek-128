@@ -48,7 +48,7 @@ while True:
     select.lower()
     bag = 0
     
-    if select == "inventory":
+    if select == "inventory" or select == "inv":
         for i in stuff:
             if stuff[i] == 0:
                 pass
@@ -61,28 +61,24 @@ while True:
 
 
     if select == "get" or select == "get item":
+        
         item = input("what do you want: ")
         amount = int(input("how many do you want: "))
         for i in stuff:
-            stuff[ item ] = amount
-            print(stuff[item])
+            if item == i:
+                stuff[i] += amount
+
+    if select == "drop" or select == "drop item":
+        item = input("what do you want: ")
+        amount = int(input("how many do you want: "))
+        for i in stuff:
+            if item == i:
+                stuff[i] -= amount
+
+                
+                
 
 
         
         
-            
-            
-            
-        '''
-    for i in stuff:
-        if select == "get" or "get item":
-            item = input("What item do you want: ")
-            amount = input("how much do you want: ")
-
-'''       
-
-            
-
-
-
-
+        
