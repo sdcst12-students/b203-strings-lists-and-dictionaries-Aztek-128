@@ -58,6 +58,7 @@ while True:
 
         if bag == 0:
             print("you ain't got shit")
+            break
 
 
     if select == "get" or select == "get item":
@@ -67,6 +68,7 @@ while True:
         for i in stuff:
             if item == i:
                 stuff[i] += amount
+                break
 
     if select == "drop" or select == "drop item":
         item = input("what do you want: ")
@@ -74,6 +76,7 @@ while True:
         for i in stuff:
             if item == i:
                 stuff[i] -= amount
+                break
 
                 
                 
